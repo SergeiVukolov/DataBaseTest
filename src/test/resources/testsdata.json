@@ -1,0 +1,9 @@
+{ "url": "http://%s:%s@localhost:%s/web",
+  "apiUrl": "http://localhost:%s/api/",
+  "version": "1",
+  "projectName": "Nexage",
+  "success": "saved",
+  "methodToken": "token/get",
+  "contentType": "image/png",
+  "host": "8080"
+}

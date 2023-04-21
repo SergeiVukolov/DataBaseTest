@@ -1,0 +1,8 @@
+{ "pathToTestsData": "src/test/resources/testsdata.json",
+  "pathToTests": "src/test/resources/tests.json",
+  "pathToRequests": "src/test/resources/requests.json",
+  "pathToConfig": "src/test/resources/config.json",
+  "pathToFieldsData": "src/test/resources/fields.json",
+  "pathToCredentials": "src/test/resources/credentialsdata.json",
+  "pathToLogFile": "target/log/log.log"
+}

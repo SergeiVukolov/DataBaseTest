@@ -8,7 +8,7 @@ public class ApiResponses {
     private static TestsData testsData = JsonHelper.getJsonData(JsonHelper.getValueFromJson("pathToTestsData"), TestsData.class);
 
     public static String getTokenResponse() {
-        String url = String.format(testsData.getApiUrl(), testsData.getHost()) + testsData.getMethodToken();
+        String url = String.format(testsData.getApiUrl(), testsData.getHostWeb()) + testsData.getMethodToken();
         return ApiRequests.getToken(url, testsData.getVersion());
     }
 

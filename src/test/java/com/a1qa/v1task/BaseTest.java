@@ -17,7 +17,7 @@ abstract class BaseTest {
     public void setup() {
         browser.maximize();
         browser.goTo(String.format(testsData.getUrl(), credentialsData.getLoginWeb(),
-                credentialsData.getPasswordWeb(), testsData.getHost()));
+                credentialsData.getPasswordWeb(), testsData.getHostWeb()));
         browser.waitForPageToLoad();
     }
 

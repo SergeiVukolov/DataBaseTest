@@ -9,6 +9,8 @@ public class Enum {
         THREE(3),
         FOUR(4),
         FIVE(5),
+        SIX(6),
+        SEVEN(7),
         SIXTEEN(16),
         THIRTYONE(31);
 

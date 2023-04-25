@@ -1,6 +1,7 @@
 package com.a1qa.v1task.utils;
 
 import com.a1qa.v1task.models.CredentialsData;
+import com.a1qa.v1task.models.HostsData;
 import com.a1qa.v1task.models.TestsData;
 
 import java.lang.reflect.InvocationTargetException;
@@ -10,12 +11,13 @@ import java.util.LinkedList;
 public class DbUtils {
     private CredentialsData credentialsData = JsonHelper.getJsonData(JsonHelper.getValueFromJson("pathToCredentials"), CredentialsData.class);
     private TestsData testsData = JsonHelper.getJsonData(JsonHelper.getValueFromJson("pathToTestsData"), TestsData.class);
+    private HostsData hostsData = JsonHelper.getJsonData(JsonHelper.getValueFromJson("pathToHosts"), HostsData.class);
 
     public Connection getConnection() {
         Connection conn = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
-            conn = DriverManager.getConnection(String.format("jdbc:mysql://localhost:%s/%s", testsData.getHostDb(), testsData.getNameDataBase()),
+            conn = DriverManager.getConnection(String.format(testsData.getDbLink(), hostsData.getHostDb(), testsData.getNameDataBase()),
                     credentialsData.getLoginDb(), credentialsData.getPasswordDb());
         } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException |
                  NoSuchMethodException | InvocationTargetException e) {
@@ -45,14 +47,6 @@ public class DbUtils {
             e.printStackTrace();
         }
         return data;
-    }
-
-    public int sendTestInfo(String query) {
-        try (PreparedStatement ps = getConnection().prepareStatement(query)) {
-            return ps.executeUpdate(query);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
     }
 
 }

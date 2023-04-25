@@ -6,5 +6,6 @@
   "pathToCredentials": "src/test/resources/credentialsdata.json",
   "pathToLogFile": "target/log/log.log",
   "pathToScreenShot": "src/test/resources/screenshot.png",
-  "pathToScreenShotTwo": "src/test/resources/screenshot2.png"
+  "pathToScreenShotTwo": "src/test/resources/screenshot2.png",
+  "pathToHosts": "src/test/resources/hosts.json"
 }

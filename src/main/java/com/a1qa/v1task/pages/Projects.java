@@ -53,6 +53,4 @@ public class Projects {
         return listProjectsText;
     }
 
-
-
 }

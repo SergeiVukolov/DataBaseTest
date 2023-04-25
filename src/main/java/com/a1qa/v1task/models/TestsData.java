@@ -10,14 +10,13 @@ import lombok.*;
 public class TestsData {
     String url;
     String apiUrl;
+    String dbLink;
     Integer version;
     String textProjects;
     String projectName;
     String success;
     String methodToken;
-    String contentType;
-    String hostWeb;
-    String hostDb;
+    String contentType;;
     String datePattern;
     String nameDataBase;
     String wordAlert;

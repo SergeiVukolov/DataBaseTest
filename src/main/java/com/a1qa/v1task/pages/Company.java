@@ -10,7 +10,6 @@ import com.a1qa.v1task.models.TestsData;
 import com.a1qa.v1task.utils.Enum;
 import com.a1qa.v1task.utils.JsonHelper;
 import org.openqa.selenium.By;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -74,6 +73,10 @@ public class Company {
 
     public String getHrefFromTestName() {
         return testLink.getHref();
+    }
+
+    public void clickToTest() {
+        testLink.clickAndWait();
     }
 
 }

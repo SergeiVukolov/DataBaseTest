@@ -7,8 +7,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class FieldsData {
-    String fieldToken;
-    String fieldVariant;
+public class HostsData {
+    String hostWeb;
+    String HostDb;
 
 }

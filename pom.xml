@@ -44,10 +44,12 @@
       <version>8.0.32</version>
     </dependency>
     <dependency>
-      <groupId>nu.pattern</groupId>
-      <artifactId>opencv</artifactId>
-      <version>2.4.9-7</version>
+      <groupId>net.imagej</groupId>
+      <artifactId>ij</artifactId>
+      <version>1.54d</version>
     </dependency>
+
+
   </dependencies>
 
 </project>

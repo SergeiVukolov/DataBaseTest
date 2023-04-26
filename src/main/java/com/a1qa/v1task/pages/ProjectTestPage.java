@@ -4,19 +4,18 @@ import aquality.selenium.browser.AqualityServices;
 import aquality.selenium.elements.ElementType;
 import aquality.selenium.elements.interfaces.ILink;
 import aquality.selenium.elements.interfaces.ITextBox;
-import com.a1qa.v1task.utils.Utility;
+import com.a1qa.v1task.utils.BrowserUtility;
 import org.openqa.selenium.By;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProjectTest {
-    private ILink screenShotLink = AqualityServices.getElementFactory().getLink(By.xpath("//a[contains(@href,'data')]"), "ScreenShot link");
-    private By tableInTest = By.xpath("//table[@class='table']//td");
-    Utility utility = new Utility();
+public class ProjectTestPage {
+    private final ILink screenShotLink = AqualityServices.getElementFactory().getLink(By.xpath("//a[contains(@href,'data')]"), "ScreenShot link");
+    private final By tableInTest = By.xpath("//table[@class='table']//td");
 
     public void clickOnScreenShot() {
         screenShotLink.click();
-        utility.switchToWindowHandle();
+        BrowserUtility.switchToWindowHandle();
         AqualityServices.getBrowser().refresh();
     }
 

@@ -20,7 +20,6 @@
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>7.7.1</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.github.aquality-automation</groupId>
@@ -43,13 +42,6 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.32</version>
     </dependency>
-    <dependency>
-      <groupId>net.imagej</groupId>
-      <artifactId>ij</artifactId>
-      <version>1.54d</version>
-    </dependency>
-
-
   </dependencies>
 
 </project>

@@ -2,11 +2,7 @@ package com.a1qa.v1task.models;
 
 import lombok.*;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
+@Data
 public class TestsData {
     String url;
     String apiUrl;
@@ -16,9 +12,8 @@ public class TestsData {
     String projectName;
     String success;
     String methodToken;
-    String contentType;;
+    String contentType;
     String datePattern;
     String nameDataBase;
     String wordAlert;
-
 }

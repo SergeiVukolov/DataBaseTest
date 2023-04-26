@@ -4,20 +4,18 @@ import aquality.selenium.browser.AqualityServices;
 import aquality.selenium.elements.ElementType;
 import aquality.selenium.elements.interfaces.IButton;
 import aquality.selenium.elements.interfaces.ITextBox;
-import com.a1qa.v1task.utils.ProjectId;
 import org.openqa.selenium.By;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Projects {
-    private ITextBox projects = AqualityServices.getElementFactory()
+public class ProjectsPage {
+    private final ITextBox projects = AqualityServices.getElementFactory()
             .getTextBox(By.xpath("//div[@class='panel-heading']"), "Projects list");
-    private ITextBox version = AqualityServices.getElementFactory()
+    private final ITextBox version = AqualityServices.getElementFactory()
             .getTextBox(By.xpath("//p[contains(@class,'footer')]//span"), "Version");
-    private IButton addButton = AqualityServices.getElementFactory()
+    private final IButton addButton = AqualityServices.getElementFactory()
             .getButton(By.xpath("//button[@data-target='#addProject']"), "Add button");
-    private By projectsLabelList = By.xpath("//div[@class='list-group']//a");
-    ProjectId projectId = new ProjectId();
+    private final By projectsLabelList = By.xpath("//div[@class='list-group']//a");
 
     public String getVersionNumber() {
         return version.getText();
@@ -32,7 +30,7 @@ public class Projects {
     }
 
     public int getProjectId(String labelProject) {
-        return projectId.getId(labelOfProject(labelProject).getAttribute("href"));
+        return Integer.parseInt(labelOfProject(labelProject).getAttribute("href").split("=")[1]);
     }
 
     public void clickOnProjectLabel(String labelProject) {
@@ -44,7 +42,7 @@ public class Projects {
         addButton.clickAndWait();
     }
 
-    public List<String> ProjectsList() {
+    public List<String> getProjectsList() {
         List<ITextBox> listProjects = AqualityServices.getElementFactory().findElements(projectsLabelList, ElementType.TEXTBOX);
         List<String> listProjectsText = new ArrayList<>();
         for (ITextBox project : listProjects) {

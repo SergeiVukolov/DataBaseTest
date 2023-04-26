@@ -2,10 +2,7 @@ package com.a1qa.v1task.models;
 
 import lombok.*;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 @Builder
 public class CompanyTests {
     private String duration;
@@ -14,5 +11,4 @@ public class CompanyTests {
     private String startTime;
     private String endTime;
     private String status;
-
 }

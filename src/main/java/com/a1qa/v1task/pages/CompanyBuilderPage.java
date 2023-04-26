@@ -5,14 +5,14 @@ import aquality.selenium.elements.interfaces.IButton;
 import aquality.selenium.elements.interfaces.ITextBox;
 import org.openqa.selenium.By;
 
-public class CompanyBuilder {
-    private ITextBox fieldInputProjectName = AqualityServices.getElementFactory()
+public class CompanyBuilderPage {
+    private final ITextBox fieldInputProjectName = AqualityServices.getElementFactory()
             .getTextBox(By.xpath("//input[@class='form-control']"), "Field input project name");
-    private IButton saveProjectButton = AqualityServices.getElementFactory()
+    private final IButton saveProjectButton = AqualityServices.getElementFactory()
             .getButton(By.xpath("//button[@type='submit']"), "Save company button");
-    private ITextBox savedCompany = AqualityServices.getElementFactory()
+    private final ITextBox savedCompany = AqualityServices.getElementFactory()
             .getTextBox(By.xpath("//div[contains(@class,'success')]"), "Saved company");
-    private ITextBox alertMessage = AqualityServices.getElementFactory()
+    private final ITextBox alertMessage = AqualityServices.getElementFactory()
             .getTextBox(By.xpath("//div[contains(@class,'alert')]"), "Alert");
 
     public void inputProjectName(String projectName) {
